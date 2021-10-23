@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&display=swap"
+        rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <title>Joaquin De Sosa - Jr Web Developer</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-header">
+            <a href="#inicio" class="logo-link"><span class="blue-text">&lt;<span class="white-text">jds</span>/&gt;</span></a>
+        </div>
+        <nav>
+            <div class="burger" id="burgerButton">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </div>
+            <ul>
+                <li><a href="#inicio" class="navitem active">Inicio</a></li>
+                <li><a href="#proyects" class="navitem">Proyectos</a></li>
+                <li><a href="#about-me" class="navitem">Sobre mi</a></li>
+                <li><a href="#contact" class="navitem">Contacto</a></li>
+                <li><a href="pdf/joaquin-de-sosa-desarrollador-web.pdf" class="secondary-button">Descargar CV</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main">
+        <div class="sections">
+            <div id="inicio">
+                <div id="presentation">
+                    <div class="title">
+                        <h1>Joaquín De Sosa</h1>
+                        <h2>Desarrollador Web Front-end Jr.</h2>
+                    </div>
+                </div>
+                <a href="#proyects" class="main-button">VER PROYECTOS</a>
+            </div>
+            <div id="proyects">
+                <div class="real-proyects">
+                    <h3>Proyectos reales</h3>
+                    <div class="proyects-container">
+                        <div class="single-proyect">
+                            <span class="label wordpress">WORDPRESS</span>
+                            <a href="https://www.tila.uy" target="_blank">
+                                <img src="img/tila.jpg"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="single-proyect">
+                            <span class="label wordpress">WORDPRESS</span>
+                            <a href="https://www.motadeco.com" target="_blank">
+                                <img src="img/motadeco.jpg"
+                                    alt="">
+                            </a>
+                        </div>
+                        <div class="single-proyect">
+                            <span class="label wordpress">WORDPRESS</span>
+                            <a href="https://www.lesemprendedores.com" target="_blank">
+                                <img src="img/lesemprendedores.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="fictional-proyects">
+                    <h3>Proyectos ficticios</h3>
+                    <div class="proyects-container">
+                        <div class="single-proyect">
+                            <span class="label html">HTML</span>
+                            <span class="label css">CSS3</span>
+                            <span class="label js">JAVASCRIPT</span>
+
+                            <a href="https://joaquinzxy.github.io/JAP_emercado/">
+                                <img src="img/emercado.png"
+                                    alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="about-me">
+                <div class="about-photo">
+                    <img src="img/me.png" alt="">
+                </div>
+                <div class="about-text">
+                    <h4>HOLA MUNDO!</h4>
+                    <h2>Soy Joaquin, aprendiz constante de desarrollo web ubicado en Uruguay</h2>
+                    <p>Freelancer y estudiante de desarrollo web, buscando mi primera experiencia laboral. Atraído por el diseño y la resolución de problemas, suelo ver retos en donde otros ven errores y me siento realizado cuando logro llegar a una solución lo más ideal posible.</p>
+                    <p>Me gusta disfrutar de peliculas y series. También viajar, de hecho viví 8 meses lejos de Uruguay, por mi cuenta y esto me permitió no solamente practicar mi inglés, si no también abrir un poco más mi mente en cuanto a culturas, otras maneras de pensar y vivir. Me gusta superarme día a día, tanto obstáculos como mis propios miedos.</p>
+                    
+                    <hr>
+                    <div class="info">
+                        <div class="info-element">
+                            <p><span class="element-title">Nombre: </span> Joaquin De Sosa</p>
+                        </div>
+                        <div class="info-element">
+                            <p><span class="element-title">Email: </span> <a href="mailto:hola@soyjoaquin.xyz">hola@soyjoaquin.xyz</a></p>
+                        </div>
+                        <div class="info-element">
+                            <p><span class="element-title">Edad: </span> 22</p>
+                        </div>
+                        <div class="info-element">
+                            <p><span class="element-title">Ingles: </span> Intermedio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contact">
+                <h2>Dejame un mensaje:</h2>
+                <div class="form-container">
+                      <form action="contact.php" class="form" name="mail-form" method="post" autocomplete="off">
+                        <div>
+                          <div class="input-group">
+                            <input type="text" id="name" name="name" data-label="0" class="inputSet">
+                            <label class="label" for="name">Nombre:</label>
+                          </div>
+                          <div class="input-group">
+                            <input type="email" id="mail" name="mail" data-label="1" class="inputSet">
+                            <label class="label" for="mail">Correo:</label>
+                          </div>     
+                          <div class="input-group">
+                            <textarea name="mailcontent" id="" cols="30" rows="3" data-label="2" class="inputSet"></textarea>
+                            <label class="label" for="mailcontent">Mensaje:</label>
+                          </div>               
+                          <input type="submit" class="secondary-button" id="btn-submit" value="Enviar">
+                        </div>
+                      </form>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <div class="aside-networks">
+        <a href="https://github.com/joaquinzxy" target="_blank" class="github"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/joaquin-de-sosa/"  target="_blank"  class="linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="#contact" class="mail"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
