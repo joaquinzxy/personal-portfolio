@@ -1,5 +1,17 @@
 document.addEventListener("DOMContentLoaded", (e)=>{
 
+    //check if contact form was send
+    let querySearch = window.location.search
+    if(querySearch!=""){
+        let parametro = new URLSearchParams(querySearch)
+        if(parametro.get("emailSend")){
+            let formContainer = document.getElementsByClassName("form-container")[0]
+            formContainer.getElementsByClassName("button-container")[0].innerHTML += `
+            <input type="button" class="valid-button" value="Mensaje enviado!">
+            `
+        }
+    }
+
     //menu responsive
     let burgerButton = document.getElementById("burgerButton")
     console.log(burgerButton)

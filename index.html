@@ -116,7 +116,7 @@
                 </div>
             </div>
             <div id="contact">
-                <h2>Dejame un mensaje:</h2>
+                <h2>Dejame un mensaje</h2>
                 <div class="form-container">
                       <form action="contact.php" class="form" name="mail-form" method="post" autocomplete="off">
                         <div>
@@ -125,14 +125,17 @@
                             <label class="label" for="name">Nombre:</label>
                           </div>
                           <div class="input-group">
-                            <input type="email" id="mail" name="mail" data-label="1" class="inputSet">
+                            <input type="email" id="mail" name="email" data-label="1" class="inputSet">
                             <label class="label" for="mail">Correo:</label>
                           </div>     
                           <div class="input-group">
-                            <textarea name="mailcontent" id="" cols="30" rows="3" data-label="2" class="inputSet"></textarea>
+                            <textarea name="mailcontent" id="mailcontent" cols="30" rows="3" data-label="2" class="inputSet"></textarea>
                             <label class="label" for="mailcontent">Mensaje:</label>
-                          </div>               
-                          <input type="submit" class="secondary-button" id="btn-submit" value="Enviar">
+                          </div>            
+                          <div class="button-container">
+                              <input type="submit" class="secondary-button" id="btn-submit" value="Enviar">
+                          </div>   
+
                         </div>
                       </form>
                   </div>
