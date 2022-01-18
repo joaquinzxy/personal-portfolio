@@ -28,7 +28,9 @@ body {
 }
 
 header {
-  background-color: #0e0e0e;
+  background-color: rgba(0, 0, 0, 0.493);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
   height: 90px;
   width: 100%;
   padding: 20px;
@@ -37,7 +39,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  top: 0;
+  top: -5;
   z-index: 2;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -57,7 +59,13 @@ header.mobile {
   transition: all 1s ease;
 }
 
+header.mobile nav {
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
 header.mobile nav ul {
+  background-color: rgba(0, 0, 0, 0.493);
   top: 70px;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
@@ -142,7 +150,6 @@ nav ul {
   text-align: center;
   right: -50px;
   top: -1600px;
-  background-color: #0e0e0e;
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -178,30 +185,37 @@ nav ul li a:hover {
 }
 
 #main .sections {
-  height: calc(100vh - 70px);
+  height: calc(100vh);
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   position: relative;
-  top: 70px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  scroll-behavior: smooth;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-  scrollbar-width: none;
-}
-
-#main .sections::-webkit-scrollbar {
-  display: none;
 }
 
 #main .sections > * {
   width: 100%;
   margin: 0 auto;
+  padding: 0 10%;
   overflow-x: visible;
   scroll-snap-align: none;
 }
 
 #main #inicio {
   text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.788)), to(rgba(5, 5, 5, 0.73))), url("../img/main-background.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.788), rgba(5, 5, 5, 0.73)), url("../img/main-background.jpg");
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #main #presentation {
@@ -211,7 +225,7 @@ nav ul li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 80px auto;
+  padding-top: 100px;
 }
 
 #main #presentation .title {
@@ -327,7 +341,7 @@ nav ul li a:hover {
 #main #proyects .proyects-container .single-proyect img {
   width: 100%;
   margin: 5px;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 #main #proyects .proyects-container .single-proyect .label {
@@ -438,6 +452,11 @@ nav ul li a:hover {
   color: white;
 }
 
+.main-buton-container {
+  height: 100px;
+  padding-top: 10px;
+}
+
 .main-button {
   margin-top: 50px;
   font-size: 20px;
@@ -537,9 +556,13 @@ nav ul li a:hover {
   }
   #main .sections > * {
     padding-top: 70px;
-    scroll-snap-align: start;
-    height: calc(100vh - 70px);
-    overflow-x: hidden;
+    min-height: 100vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #main .sections #presentation {
+    padding: 15%;
   }
   #main .sections #proyects .proyects-container .single-proyect {
     width: 33%;

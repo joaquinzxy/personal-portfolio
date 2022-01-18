@@ -32,14 +32,15 @@ body {
 }
 
 header {
-  background-color: $mainblack;
+  background-color: rgba(0, 0, 0, 0.493);
+  backdrop-filter: blur(4.0px);
   height: 90px;
   width: 100%;
   padding: 20px;
   border-bottom: 2px solid #009ff9;  
   display: flex;
   position: fixed;
-  top: 0;
+  top: -5;
   z-index: 2;
   align-items: start;
   justify-content: center;
@@ -51,7 +52,9 @@ header {
   &.mobile {
     transition: all 1s ease;
     nav {
+      backdrop-filter: blur(4.0px);
         ul{
+          background-color: rgba(0, 0, 0, 0.493);
             top: 70px;
             transition: all 1s ease;
         }
@@ -112,7 +115,6 @@ nav {
     text-align: center;
     right: -50px;
     top: -1600px;
-    background-color: $mainblack;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -145,21 +147,16 @@ nav {
   height: 100vh;
 
   .sections {
-    height: calc(100vh - 70px);
+    height: calc(100vh);
+    min-height: fit-content;
     position: relative;
-    top: 70px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-    scrollbar-width: none; //for firefox
-    &::-webkit-scrollbar {
-      display: none;
-    }
 
     > * {
       width: 100%;
       margin: 0 auto;
+      padding: 0 10%;
       overflow-x: visible;
       scroll-snap-align: none;
     }
@@ -167,12 +164,19 @@ nav {
 
   #inicio {
     text-align: center;
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.788), rgba(5, 5, 5, 0.73)),
+    url("../img/main-background.jpg");
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   #presentation {
     display: flex;
     align-items: center;
-    margin: 80px auto;
+    padding-top: 100px;
     .title {
       width: 100%;
       text-align: center;
@@ -260,7 +264,7 @@ nav {
         img {
           width: 100%;
           margin: 5px;
-          border-radius: 20px;
+          border-radius: 0px;
         }
 
         .label {
@@ -363,6 +367,11 @@ nav {
   }
 }
 
+.main-buton-container{
+  height: 100px;
+  padding-top: 10px;
+}
+
 .main-button {
   margin-top: 50px;
   font-size: 20px;
@@ -457,9 +466,12 @@ nav {
     .sections{
         >*{
             padding-top: 70px;
-            scroll-snap-align: start;
-            height: calc(100vh - 70px);
-            overflow-x: hidden;
+            min-height:100vh;
+            height: fit-content;
+
+        }
+        #presentation{
+          padding: 15%;
         }
         #proyects{
             .proyects-container{
